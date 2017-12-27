@@ -1,0 +1,31 @@
+﻿@model Razor.Models.Product[]
+@{ 
+    Layout = null;
+}
+
+<html>
+<head>
+    <title>Razor</title>
+    <link href="~/lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+</head>
+<body>
+
+    <div class="container">
+        <br /><br />
+        <table class="table">
+            <tr>
+                <th>Name</th>
+                <th>Price</th>
+            </tr>
+            @foreach (Product p in Model)
+            {
+                <tr>
+                    <td>@p.name</td>
+                    <td>$@p.price</td>
+                </tr>
+            }
+        </table>
+    </div>
+
+</body>
+</html>

@@ -46,7 +46,18 @@ namespace mvcCoreOverview.Controllers
             return View();
         }
 
+        public IActionResult QueryString(string name, string lastname)
+        {
+            ViewBag.name = name;
+            ViewBag.lastname = lastname;
 
+            return View();
+        }
+        
+        public IActionResult Redirect()
+        {
+            return Redirect("http://www.google.com");
+        }
 
     }
 }
